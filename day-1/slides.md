@@ -1,5 +1,5 @@
 ---
-title: Week 7 Day 1 - Algorithm, Javascript, and Problem Solving
+title: Rewind Class 1- Algorithm, Javascript, and Problem Solving
 layout: intro
 ---
 
@@ -825,3 +825,38 @@ align: center
 ---
 # Questions
 ## ❓❓❓
+
+---
+
+# At Home Practice
+
+1. Write a function that takes in an array of numbers and returns the sum.
+> Input: `[1,2,3,4,5]`
+> Output: `15`
+2. Given two strings as arguments to your function return true if they are the same or false otherwise.
+> Input: `kuda`, `KuDa`
+> Output: `true`
+3. Create a function that will reverse any string passed into it
+> Input:`“hello”`
+> Output: `“olleh”`
+4. Create a function that accepts three parameters (a number, b number , c number) and prints out all combinations of those.
+> Input: `1`, `2`, `3`
+> Ouput: `[123, 132, 213, 231, 312, 321]`
+
+---
+
+# At Home Practice
+
+5. Create a function that accepts 2 integers (a & b) and prints out all whole numbers between them including both endpoints but not including those numbers
+> Input: `3`, `8`
+> Output: `[4, 5, 6, 7]`
+6. Create a function that accepts 0-n parameters and adds them together (or multiplies)
+> Input: `5`
+> Output: `15`
+7. Create a function that checks whether all elements within an array are unique values
+> Input: `[1,2,2,4,5]`
+> Output: `false`
+8. Create a function that removes duplicates from an array
+> Input: `[1,2,2,3,4,5]`
+> Output: `[1,2,3,4,5]`
+
