@@ -789,12 +789,14 @@ align: center
 
 # ✏️ Advanced Practice
 Write a pseudocode for this problem statement:
-> Given a string, write code that returns true or false depending on whether it contains any vowels. Vowel characters are "a", "i", "u", "e", "o"
+> Given a string, write code that returns true or false depending on whether it contains any vowels. Vowel characters are "a", "i", "u", "e", "o". The string might be a mix of capital letters.
 
 Example:  
 Input: `revou`  
 Output: `true`
 
+Input: `cAt`
+Output: `true`
 
 Input: `bzzr`  
 Output: `false`
