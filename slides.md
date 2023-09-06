@@ -691,11 +691,12 @@ Pseudocode has three parts:
 ## Pseudocode
 Problem: I want to check if a number is even or odd.
 
-Solution: Use an `if` statement with two conditions, one for when it's even and another condition that checks whether its divisible by 2
+Solution: Use an `if` statement with a condition that checks whether its divisible by 2.
 
-Input = Number (int) 10,25436789 etc...
-
-Output= True(even), False(odd).
+| Input | Number (int) 10,25436789 etc... |
+| --- | --- |
+| Output | True(even), False(odd). |
+| Algorithm | Check if the Number is divisible by two or not. If yes: even, if no: odd. |
 
 ---
 
@@ -717,7 +718,7 @@ Algorithm:
 
 ---
 
-| Algorithm: | Code |
+| **Algorithm:** | **Code** |
 | :--- | :--- |
 | 1. START | |
 | 2. DEFINE number AS AN INTEGER | let number; |
@@ -728,3 +729,79 @@ Algorithm:
 | 7. PRINT "The number is odd." | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log("The number is odd.")|
 | 8. END IF | &nbsp; &nbsp; &nbsp; &nbsp; } |
 | 9. END | } |
+
+---
+layout: center
+align: center
+---
+
+# ✏️ Practice
+Write a pseudocode for this algorithm:
+
+```js
+function sumOfNumbers(n) {
+  let total = 0
+
+  for (var i = 1; i <= n; i++) {
+    total +=i
+  }
+
+  return total
+}
+```
+
+
+---
+layout: center
+align: center
+---
+
+# ✏️ Practice
+Write a pseudocode for this problem statement:
+>  Write an algorithm that will take in two numbers and print the larger of them out to the console.  
+
+Example:  
+Input: `5`, `8`  
+Output: `8`
+
+---
+layout: center
+align: center
+---
+
+# ✏️ Practice
+Write a pseudocode for this problem statement:
+> Write an algorithm to create this pattern:
+
+```*
+*
+**
+***
+****
+*****
+******
+```
+
+---
+layout: center
+align: center
+---
+
+# ✏️ Advanced Practice
+Write a pseudocode for this problem statement:
+> Given a string, write code that returns true or false depending on whether it contains any vowels. Vowel characters are "a", "i", "u", "e", "o"
+
+Example:  
+Input: `revou`  
+Output: `true`
+
+
+Input: `bzzr`  
+Output: `false`
+
+---
+layout: center
+align: center
+---
+# Questions
+## ❓❓❓
