@@ -1,9 +1,9 @@
 ---
-title: Week 7 Day 1 - Programming & Introduction JavaScript
+title: Week 7 Day 1 - Algorithm, Javascript, and Problem Solving
 layout: intro
 ---
 
-# Programming & Introduction JavaScript
+# Algorithm, Javascript, and Problem Solving
 
 Rewind Class Day 1
 
@@ -631,3 +631,100 @@ typeof undefined // "undefined"
 
 - [w3schools](https://w3schools.com/js/)
 - [Developer Mozilla](https://developer.mozilla.org/en-US/)
+
+---
+
+# Implementation - How to Solve a problem
+ 
+## Step One : Understand the Problem
+What are we trying to solve?
+What do you want your program to be able to do for users and how will they interact with our code?
+**Example:** We need to create a calculator that can add two numbers together (or subtract if needed).
+### Why does it matter?
+We have to understand why we're solving these problems before we start coding because there's no point doing something that doesn't work!
+We should understand why we're solving these problems because there may already exist solutions out there that could help us avoid reinventing the wheel!
+
+We should understand why we're solving these problems so that we know what features we'll have to implement later on when building out our application. This helps to guide what our code will look like.
+
+We should understand why we're solving these problems so we know what kind of solution makes sense. This helps us decide whether there's already something out there.
+
+---
+
+# Implementation
+
+## Step Two : Write the steps
+Write down what input should go into each part of your algorithm so that you know exactly where to put things later on!
+
+Write down what steps should take place when the user runs their program. What data needs to go into each step so that the computer knows where to start.
+
+---
+
+# Implementation
+
+
+## Pseudocode
+Write out pseudocode of what each step should look like in English.
+
+This is called writing **pseudocode**. It's not real code, but it helps us think about what needs to happen before we start coding!
+
+---
+
+# Implementation
+
+## Pseudocode
+
+What is pseudocode
+- It's just english words written down without any syntax or punctuation
+- You don't have to write actual code but rather describe what you would expect the computer to do
+- This helps us think about problems before writing code so we know exactly where we're going wrong when something goes wrong!
+- The purpose here isn't to make an exact copy of the code but instead give us enough information so we know exactly where to start when writing the actual code
+
+Pseudocode has three parts:
+- Input - What information needs to come into this function/method
+- Output - What information comes out after running through all the lines inside the method / function
+- Algorithm - How we will solve our problem using logic and maths
+
+---
+
+# Implementation
+
+## Pseudocode
+Problem: I want to check if a number is even or odd.
+
+Solution: Use an `if` statement with two conditions, one for when it's even and another condition that checks whether its divisible by 2
+
+Input = Number (int) 10,25436789 etc...
+
+Output= True(even), False(odd).
+
+---
+
+# Implementation
+
+## Pseudocode
+
+Algorithm:
+
+1. START
+2. DEFINE number AS AN INTEGER
+3. INPUT number
+4. IF number MOD 2 = 0 THEN
+5. PRINT "The number is even."
+6. ELSE
+7. PRINT "The number is odd."
+8. END IF
+9. END
+
+---
+
+| Algorithm: | Code |
+| :--- | :--- |
+| 1. START | |
+| 2. DEFINE number AS AN INTEGER | let number; |
+| 3. INPUT number | function isItEven(number) { |
+| 4. IF number MOD 2 = 0 THEN | &nbsp; &nbsp;&nbsp; &nbsp;  if (number % 2 == 0) { |
+| 5. PRINT "The number is even." | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log("The number is even.") |
+| 6. ELSE | &nbsp; &nbsp;&nbsp; &nbsp;  } else { |
+| 7. PRINT "The number is odd." | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log("The number is odd.")|
+| 8. END IF | &nbsp; &nbsp; &nbsp; &nbsp; } |
+| 9. END | } |
