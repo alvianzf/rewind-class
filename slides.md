@@ -773,7 +773,7 @@ align: center
 Write a pseudocode for this problem statement:
 > Write an algorithm to create this pattern:
 
-```*
+```js
 *
 **
 ***
