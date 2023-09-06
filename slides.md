@@ -803,5 +803,23 @@ Output: `false`
 layout: center
 align: center
 ---
+
+# ✏️ Advanced Practice
+Write a pseudocode for this problem statement:
+> Given an array of numbers. Please return the duplicates in another array, If there are no duplicates, return an empty string
+
+Example:
+
+Input: `[1,2,4,2,5,1]`
+Output: `[1,2]`
+
+Input: `[2,5,7,3,5,8]`
+Output: `[]`
+
+
+---
+layout: center
+align: center
+---
 # Questions
 ## ❓❓❓
