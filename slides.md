@@ -795,7 +795,7 @@ Example:
 Input: `revou`  
 Output: `true`
 
-Input: `cAt`
+Input: `cAt`  
 Output: `true`
 
 Input: `bzzr`  
