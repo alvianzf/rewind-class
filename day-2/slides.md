@@ -272,3 +272,12 @@ async function fetchData() {
   }
 }
 ```
+
+---
+layout: center
+---
+#  ![](https://img.shields.io/badge/-Typescript-informational?style=flat&logo=typescript&logoColor=007acc&color=2bbc8a)
+# ~~Typoscript~~
+# Typescript
+
+---
