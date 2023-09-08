@@ -276,8 +276,305 @@ async function fetchData() {
 ---
 layout: center
 ---
+
+# Questions anyone?
+
+---
+layout: center
+align: center
+---
 #  ![](https://img.shields.io/badge/-Typescript-informational?style=flat&logo=typescript&logoColor=007acc&color=2bbc8a)
 # ~~Typoscript~~
 # Typescript
 
 ---
+
+# Typescript
+JavaScript with types
+
+Features:
+- Static type checking
+- Classes, interfaces and generics
+- Support for JSX syntax in .tsx files. (react and such)
+- Works well alongside other JavaScript tools like Babel and webpack
+- ~~Confusing as ~~f**k~~~~
+- ~~Always kena Type Error~~
+- ~~Red lines under syntaxes~~
+- ~~Build Error because forgot to put type on shit~~
+
+<br/>
+<br/>
+<br/>
+
+> <img src="https://img.shields.io/badge/-Typescript-informational?style=flat&logo=typescript&logoColor=007acc&color=2bbc8a" >
+> <sup>Don't do it, srlsly</sup>
+
+---
+
+# Typescript Examples
+and why it is annoying as f**k
+```typescript
+interface Person {
+    name?: string;
+    age ?: number | undefined;
+    };
+
+const person  :Person = {};  /* error */
+const person2 :{name ?string ,age ?number|undefined}={} // ok
+const person3 :{[key:string]:any}= {}   //ok
+const person4 ={};//error
+const person5 =new Object();/*error*/ 
+```
+
+See? See? 
+### JUST LOOK AT IT!
+sheesh!
+
+---
+
+# Why Typescript
+Because of the static typing...
+## ...but not really
+---
+
+# Why Typescript, why?
+Actual reason:
+
+- **Error Prevention**: TypeScript introduces static typing to JavaScript, allowing developers to define and enforce types for variables, function parameters, and return values. This helps catch type-related errors at compile time rather than runtime, leading to more robust and reliable code.  
+- **Code Quality**: Static typing helps improve code quality by reducing the likelihood of type-related bugs and runtime errors. Developers can catch and fix issues early in the development process, resulting in more maintainable and bug-free codebases.
+- **Scalability**: TypeScript is particularly valuable for large and complex codebases. Its strong typing system helps manage the complexity of large applications by providing a clear and maintainable structure.  
+- **Enhanced Collaboration**: When working in teams, TypeScript's type system provides clear contracts and expectations for function inputs and outputs. This reduces miscommunications and improves collaboration among team members.
+
+---
+
+# Type Annotations and Type Inference
+Type Annotations and Type Inference are fundamental concepts in TypeScript. It allows you to specify and check the types of variables, function parameters, and return values.
+
+#### Annotations
+```typescript
+let age: number;
+age = 30; // Valid
+age = "thirty"; // Error: Type '"thirty"' is not assignable to type 'number'.
+
+```
+
+```typescript
+function add(a: number, b: number): number {
+  return a + b;
+}
+```
+
+#### Inference
+```typescript
+let name = "John"; // TypeScript infers 'name' as type 'string'
+name = 30; // Error: Type 'number' is not assignable to type 'string'.
+```
+
+```typescript
+function greet(message: string) {
+  console.log(message);
+}
+
+greet("Hello, TypeScript!"); // TypeScript infers the parameter 'message' as type 'string'
+
+```
+
+---
+
+# Declaring Variables with Types
+This is known as using type annotations. 
+
+```typescript
+// Using type annotations
+let age: number;
+let name: string;
+let isStudent: boolean;
+
+// Assigning values to the variables
+age = 30;
+name = "John";
+isStudent = true;
+
+// TypeScript will enforce that the assigned values match the specified types
+
+```
+
+---
+
+# Arrays and Tuples
+arrays and tuples are used to work with collections of data, but they have different characteristics and use cases.
+
+#### An array is an ordered list of values, all of which have the same type
+
+```typescript
+let numbers: number[] = [1, 2, 3, 4, 5];
+let names: string[] = ["Alice", "Bob", "Charlie"];
+```
+
+We can also type Array generic type to declare arrays:
+```typescript
+let colors: Array<string> = ["red", "green", "blue"];
+```
+
+
+#### A tuple is an ordered collection of values with a fixed length, and each element in a tuple can have a different data type.
+
+```typescript
+let person: [string, number] = ["Alice", 30];
+let point: [number, number] = [2.5, 3];
+```
+Tuples provide a way to ensure that the elements are in a specific order and have specific types
+```typescript
+person[0] = 42; // Error: Type '42' is not assignable to type 'string'.
+point.push(4);  // Error: Property 'push' does not exist on type '[number, number]'.
+```
+
+---
+
+# Type Aliases
+a type alias is a way to give a name to a specific type or a combination of types
+
+```typescript
+type Point = {
+  x: number;
+  y: number;
+};
+
+type RGBColor = "red" | "green" | "blue"; // This is called Enums
+
+type Person = {
+  name: string;
+  age: number;
+};
+
+let myPoint: Point = { x: 10, y: 20 };
+let primaryColor: RGBColor = "red";
+let user: Person = { name: "Fiqra", age: 30 };
+```
+
+---
+
+# `:any` and `unknown`
+any and unknown types are both used to represent values of unknown or unpredictable types.
+
+#### `:any` disables typecheckers
+
+```typescript
+let value: any = 42;
+value = "Hello";
+value = [1, 2, 3];
+```
+
+#### `:unknown` type is used as a type annotation to indicate that a variable or value can have any type. It is more type safe than `:any`. It still enforces type inference.
+
+```typescript
+let value: unknown = 42;
+// Error: Operator '+' cannot be applied to types 'unknown' and 'number'.
+let result = value + 10;
+```
+
+---
+
+# Interfaces
+An interface defines what properties an object should contain but doesn't define how these objects look.
+
+```typescript
+interface Person {
+  name: string;
+  age: number;
+}
+
+const alice: Person = { name: "Alice", age: 30 };
+```
+It can also define function types:
+```typescript
+interface Calculator {
+  add(x: number, y: number): number;
+  subtract(x: number, y: number): number;
+}
+
+const basicCalculator: Calculator = {
+  add(x, y) {
+    return x + y;
+  },
+  subtract(x, y) {
+    return x - y;
+  },
+};
+```
+
+---
+
+# Types vs Interface
+
+Interfaces can be extended, while types cannot.
+
+```typescript
+interface Person { name: string; }
+interface Person { age: number; }
+// This results in a merged interface: { name: string; age: number; }
+```
+
+```typescript
+interface Parent { a: number; }
+interface Child extends Parent { b: string; }
+```
+
+Interface is commonly used to implement OOP to objects, classes, or functions.
+
+---
+
+# Functions
+Optional and Default Parameters
+
+Optional parameters are parameters that may or may not be provided when calling a function.
+```typescript
+function greet(name?: string): string {
+  if (name) {
+    return `Hello, ${name}!`;
+  }
+  return "Hello, Stranger!";
+}
+
+```
+Default parameters allow you to provide a default value for a parameter in case the caller doesn't provide an argument for that parameter. 
+```typescript
+function greetWithDefault(name: string = "Stranger"): string {
+  return `Hello, ${name}!`;
+}
+
+console.log(greetWithDefault());         // "Hello, Stranger!"
+console.log(greetWithDefault("Alice"));  // "Hello, Alice!"
+
+```
+
+---
+
+# Generics in TypeScript
+it allow you to write functions, classes, and interfaces that can work with different data types while preserving type information. 
+
+```typescript
+function swap<T>(a: T, b: T): void {
+  const temp: T = a;
+  a = b;
+  b = temp;
+}
+
+let x: number = 5;
+let y: number = 10;
+swap(x, y);
+console.log(x, y); // Output: 10 5
+```
+
+---
+layout: center
+---
+# Questions?
+
+---
+layout: center
+align: center
+---
+# It's a wrap!
+## Thanks guys
+See more Typescript next week on React!
