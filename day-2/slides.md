@@ -37,7 +37,7 @@ Past experiences:
 
 ---
 
-# About Javascript
+# About Javascript Functions
 JavaScript is a single-threaded language that runs on a main thread (usually within a web browser) to execute code sequentially. This means that if you have multiple tasks or operations to perform in your JavaScript code, they are executed one after the other, in the order they are encountered in your script.
 
 <center>
@@ -138,4 +138,137 @@ somePromise
     // Code to handle the rejection of the Promise (error)
   });
 
+```
+
+---
+
+# Async - Await in Javascript
+
+`async` functions are like regular JavaScript functions but they return promises instead of using callbacks or returning values directly  
+`await` is a keyword that can only be used inside async functions, it will pause execution until promise settles or rejects/
+
+Example   
+```javascript
+const axios = require('axios');
+
+async function getData() {
+    try{
+        const response = await axios('https://api.github.com/users');
+        return response.data
+    } catch(err){
+        console.log(`Error ${err}`);
+    }
+}
+
+getData();
+```
+It will return 
+
+```javascript
+Promise {<pending>}
+```
+
+---
+
+# Async - Await
+How would you read the data from the result of the previous function?
+
+<center>
+    <h1>Using `.then()`</h1>
+</center>
+
+```javascript
+getData()
+    .then(res => console.log(res))
+```
+<center>
+    <h1>and handle the error using `.catch()`</h1>
+</center>
+
+
+```javascript
+getData()
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+```
+
+---
+
+# What's the difference between `async await` and `.then()` ?
+### Async/Await
+- async functions allow you to write asynchronous code in a more synchronous-like style. You use the await keyword within an async function to pause execution until a Promise is resolved or rejected. This makes the code look linear and easier to read, as it resembles traditional synchronous code.
+
+```javascript
+async function fetchData() {
+  try {
+    const response = await fetch("https://api.example.com/data");
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+---
+
+# What's the difference between `async await` and `.then()` ?
+### `.then()`
+- The .then() method is used to handle asynchronous operations by chaining callbacks. You attach .then() handlers to Promises to define what should happen when the Promise is fulfilled (resolved) and when it's rejected. This style of coding can lead to nested callbacks, commonly known as "callback hell" or "Pyramid of Doom."
+
+```javascript
+fetch("https://api.example.com/data")
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
+
+```
+
+---
+
+# The Pyramid of Doom!
+a.k.a Callback hell!
+
+The "Pyramid of Doom," also known as "Callback Hell," is a term used in programming to describe a situation where multiple levels of nested callbacks create an indentation pyramid-like structure in your code. This occurs when you have a series of asynchronous operations or callback functions within other callback functions. It can make your code difficult to read, understand, and maintain.
+
+```javascript
+asyncFunction1((result1) => {
+  // Code that uses result1
+  asyncFunction2((result2) => {
+    // Code that uses result2
+    asyncFunction3((result3) => {
+      // Code that uses result3
+      asyncFunction4((result4) => {
+        // Code that uses result4
+        // ...
+      });
+    });
+  });
+});
+
+```
+
+---
+
+# How to Escape the Pyramid of Doom
+Using async/wait
+
+To mitigate the Pyramid of Doom, developers often use techniques like Promises and async/await, which provide more structured and readable ways to handle asynchronous code.
+
+```javascript
+async function fetchData() {
+  try {
+    const result1 = await asyncFunction1();
+    // Code that uses result1
+    const result2 = await asyncFunction2();
+    // Code that uses result2
+    const result3 = await asyncFunction3();
+    // Code that uses result3
+    const result4 = await asyncFunction4();
+    // Code that uses result4
+    // ...
+  } catch (error) {
+    // Handle errors
+  }
+}
 ```

@@ -1,3 +1,4 @@
+const axios = require('axios')
 
 function generateNumber(a, b, c) {
 
@@ -50,3 +51,14 @@ function permutations(a, b, c) {
 }
 
 permutations(1,2,3)
+
+async function getData() {
+    try{
+        const response = await axios('https://api.github.com/users');
+        return response
+    } catch(err){
+        console.log(`Error ${err}`);
+    }
+}
+
+getData().then(res => console.log(res))
