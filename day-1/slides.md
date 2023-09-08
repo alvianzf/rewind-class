@@ -23,7 +23,8 @@ image: https://media.licdn.com/dms/image/C4E03AQHV6QWRtZFHFQ/profile-displayphot
 # Alvian Zachry Faturrahman
 
 Program Manager at RevoU  
-CTO at TiketQ
+CTO at TiketQ  
+Technical Lead at Kuadran Teknologi Indonesia
 
 Past experiences:
 
