@@ -578,3 +578,6 @@ align: center
 # It's a wrap!
 ## Thanks guys
 See more Typescript next week on React!
+<br />
+<br />
+![](https://img.shields.io/badge/React-informational?style=flat&logo=react&logoColor=blue&color=2bbc8a)
