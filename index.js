@@ -89,16 +89,15 @@ function sumOfNumbers(n) {          // input number
 // PRINT SECOND NUMBER
 // END
 
-function checkLarger(firstNumber, secondNumber) {
-    if (firstNumber > secondNumber) {
-        console.log(firstNumber)
-    } else {
-        console.log(secondNumber)
-    }
-}
+// function checkLarger(firstNumber, secondNumber) {
+//     if (firstNumber > secondNumber) {
+//         console.log(firstNumber)
+//     } else {
+//         console.log(secondNumber)
+//     }
+// }
 
-checkLarger(110, 8)
-
+// checkLarger(110, 8)
 
 // *
 // **
@@ -106,8 +105,7 @@ checkLarger(110, 8)
 // ****
 // *****
 // ******
-
-
+ 
 // START
 // Create function with input of n
 // Create Var Star
@@ -120,7 +118,6 @@ checkLarger(110, 8)
 // END LOOP a
 // END
 
-
 // START
 // DEFINE ROW = 6
 // DEFINE STAR
@@ -132,5 +129,49 @@ const row = 6
 let star = ''
 for (let i = 1; i <= 6; i++) {
     star += '*'
-    console.log(star)
+    // console.log(star)
 }
+
+
+//pseudocode
+//START (A,B,C)
+//theNumber = JOIN ABC
+//possibility = []
+//LOOP i < theNumber.length; i++
+//Swap [i] to [i+1]
+//swap [-i] t0 [-i - 1]
+
+function generateNumber(...num){
+  let joinNumber = num.join()
+
+  let possibility = []
+  for (let i = 0; i < joinNumber.length; i++) {
+    let temp
+    
+    
+  }
+}
+
+function gerenerateNumber(a, b, c) {
+
+  const num = [a, b, c]
+  let possibility = []
+
+  console.log({num})
+
+  for (let i = 0 ; i < 3; i++) {
+    for(let j = 0; j < 3; j++) {
+      if (i != j) {
+        for (let k = 0; k < 3; k++) {
+          if (i != k && j != k) {
+            possibility.push(Number(`${num[i]}${num[j]}${num[k]}`))
+          }
+        }
+      }
+    }
+  }
+
+  return possibility
+}
+
+generateNumber(1,2,3)
